@@ -1,0 +1,47 @@
+<!-- <p>login works!</p>
+
+REACTIVE FOR -->
+
+<h1 style="text-align: center">TEMPLATE SIGN-UP FORM</h1>
+<form class="container" #registerform="ngForm">
+  <h4>Please Login....</h4>
+
+  <input
+    type="email"
+    placeholder="Enter your email"
+    required
+    pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    name="email"
+    ngModel
+    #email="ngModel"
+  />
+
+  <h5 class="red-text" [hidden]="email.valid || email.untouched">
+    ENTER CORRECT EMAIL
+  </h5>
+  <input
+    type="password"
+    placeholder="Enter your password"
+    required
+    minlength="6"
+    ngModel
+    name="password"
+    #password="ngModel"
+  />
+
+  <h5 class="red-text" [hidden]="password.valid || password.untouched">
+    PASSWOD IS REQUIRED WITH MIN LENGTH=6
+  </h5>
+
+  <button
+    class="btn-green"
+    (click)="register(registerform)"
+    [disabled]="registerform.invalid"
+  >
+    Signup
+  </button>
+  <button class="btn-red" (click)="reset(registerform)">RESET</button>
+</form>
+
+<!-- <h4>EMAIL CORRET --- {{ email.valid }}</h4>
+<h4>EMAIL UNTOUCHED --- {{ email.untouched }}</h4> -->

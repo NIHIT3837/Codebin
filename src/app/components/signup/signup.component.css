@@ -1,0 +1,82 @@
+/* Container styling */
+.container {
+  max-width: 400px;
+  margin: auto;
+  margin-top: 60px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+/* Title styling */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Form heading */
+h4 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Input styling */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Red text for validation errors */
+.red-text {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Button styling */
+button {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Green button */
+.btn-green {
+  background-color: #28a745;
+}
+
+/* Red button */
+.btn-red {
+  background-color: #dc3545;
+}
+
+/* Button disabled state */
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 15px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+}

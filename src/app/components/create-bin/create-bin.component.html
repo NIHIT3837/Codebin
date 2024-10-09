@@ -1,0 +1,36 @@
+<!-- <p>login works!</p>
+
+REACTIVE FOR -->
+
+<form class="container" [formGroup]="BinForm">
+  <h4>CREATE CODE SNIPPET</h4>
+
+  <br />
+
+  <input type="text" placeholder="Enter your title" [formControl]="title" />
+
+  <br />
+
+  <h5 class="red-text" [hidden]="title.valid || title.untouched">
+    ENTER CORRECT title
+  </h5>
+  <br />
+  <textarea
+    type="text"
+    placeholder="Enter your code"
+    [formControl]="code"
+  ></textarea>
+  <br />
+
+  <h5 class="red-text" [hidden]="code.valid || code.untouched">
+    CODE IS REQUIRED
+  </h5>
+  <br />
+
+  <button class="btn-green" (click)="save()" [disabled]="BinForm.invalid">
+    Create
+  </button>
+</form>
+
+<!-- <h4>EMAIL CORRET --- {{ email.valid }}</h4>
+<h4>EMAIL UNTOUCHED --- {{ email.untouched }}</h4> -->
